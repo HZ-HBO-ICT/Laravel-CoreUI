@@ -1,0 +1,28 @@
+{
+    "name": "hz-hbo-ict/laravel-core-ui",
+    "description": "Very opinionated implementation of CoreUI within Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Loek van der Linde",
+            "email": "loek.linde@hz.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HzHboIct\\LaravelCoreUI\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HzHboIct\\LaravelCoreUI\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=7.1.3",
+        "laravel/framework": "^5.5|^5.7"
+    }
+}
