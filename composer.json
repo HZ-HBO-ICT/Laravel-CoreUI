@@ -25,5 +25,28 @@
         "php": ">=7.1.3",
         "laravel/framework": "^5.5|^5.7",
         "coreui/coreui": "^2.0"
+    },
+    "scripts": {
+        "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.js resources/assets/js/",
+        "copy-coreui-css": "cp vendor/coreui/coreui/dist/css/coreui.css resources/assets/css/",
+        "copy-coreui-js": "cp vendor/coreui/coreui/dist/js/coreui.js resources/assets/js/",
+        "copy-jquery": "cp node_modules/jquery/dist/jquery.js resources/assets/js/",
+        "copy-popper": "cp node_modules/popper.js/dist/esm/popper.js resources/assets/js/",
+        "copy-assets": [
+            "@copy-bootstrap",
+            "@copy-coreui-css",
+            "@copy-coreui-js",
+            "@copy-jquery",
+            "@copy-popper"
+        ],
+        "post-install-cmd": [
+            "@copy-assets"
+        ],
+        "post-update-cmd": [
+            "@copy-assets"
+        ]
+    },
+    "scripts-descriptions": {
+        "copy-assets": "Copy necessary dependencies from installs to resources/assets/ folder"
     }
 }
