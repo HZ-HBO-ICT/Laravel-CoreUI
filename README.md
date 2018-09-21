@@ -30,7 +30,7 @@ This template yields multiple sections, all of them optional:
 A page can look like this:
 
 ```php
-@extends('coreui:page')
+@extends('coreui:master')
 
 @push('css')
     <link rel="stylesheet" type="text/css" href="/url/to/stylesheet.css">
@@ -78,10 +78,9 @@ You can now edit them under `resources/views/vendor/coreui`.
 
 ## Updating the package
 
-To update the package, run the following two commands. Note that this **will** overwrite any changes you've made in the published files.
+To update the package, run the following command. Note that this **will** overwrite any changes you've made in the published files.
 
 ```bash
-$ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=views --force
 $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=assets --force
 ```
 
