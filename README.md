@@ -16,7 +16,7 @@ $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider"
 
 ## Usage
 
-To use the template, create a blade file and extend the layout with `@extends('coreui::page')`.
+To use the template, create a blade file and extend the layout with `@extends('coreui::master')`.
 
 This template yields multiple sections, all of them optional:
 
