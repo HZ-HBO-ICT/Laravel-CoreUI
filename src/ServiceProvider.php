@@ -4,18 +4,21 @@ namespace HzHboIct\LaravelCoreUI;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    public function register()
-    {
-        // TODO probably some sort of menu builder
-    }
-
     public function boot()
     {
-        $this->loadViewsFrom($this->getPathFromPackageRoot('resources/views'), 'coreui');
+        $this->loadViewsFrom(
+            $this->getPathFromPackageRoot('resources/views'),
+            'coreui'
+        );
 
         $this->publishConfig();
         $this->publishAssets();
         $this->publishViews();
+    }
+
+    public function register()
+    {
+        $this->mergeConfigFrom($this->getPathFromPackageRoot('config/coreui.php'), 'coreui');
     }
 
     private function getPathFromPackageRoot(string $path): string
@@ -41,6 +44,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             $this->getPathFromPackageRoot('resources/views/') => resource_path('views/vendor/coreui'),
-        ]);
+        ], 'views');
     }
 }
