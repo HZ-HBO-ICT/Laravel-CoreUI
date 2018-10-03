@@ -26,6 +26,8 @@
         "laravel/framework": "^5.5|^5.7",
         "coreui/coreui": "^2.0"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.js resources/assets/js/",
         "copy-coreui-css": "cp vendor/coreui/coreui/dist/css/coreui.css resources/assets/css/",
