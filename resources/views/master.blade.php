@@ -8,6 +8,7 @@
 
     <!-- CoreUI CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/coreui/css/fontawesome.css') }}">
     <!-- Custom CSS -->
     @stack('css')
 
