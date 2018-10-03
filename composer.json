@@ -32,12 +32,14 @@
         "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.js resources/assets/js/",
         "copy-coreui-css": "cp vendor/coreui/coreui/dist/css/coreui.css resources/assets/css/",
         "copy-coreui-js": "cp vendor/coreui/coreui/dist/js/coreui.js resources/assets/js/",
+        "copy-fontawesome": "cp node_modules/@fortawesome/fontawesome-free/css/all.css resources/assets/css/fontawesome.css",
         "copy-jquery": "cp node_modules/jquery/dist/jquery.js resources/assets/js/",
         "copy-popper": "cp node_modules/popper.js/dist/esm/popper.js resources/assets/js/",
         "copy-assets": [
             "@copy-bootstrap",
             "@copy-coreui-css",
             "@copy-coreui-js",
+            "@copy-fontawesome",
             "@copy-jquery",
             "@copy-popper"
         ],
