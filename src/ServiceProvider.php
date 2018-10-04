@@ -43,7 +43,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     private function publishViews(): void
     {
         $this->publishes([
-            $this->getPathFromPackageRoot('resources/views/') => resource_path('views/vendor/coreui'),
+            $this->getPathFromPackageRoot('resources/views/') => resource_path('views/coreui'),
         ], 'views');
     }
 }
