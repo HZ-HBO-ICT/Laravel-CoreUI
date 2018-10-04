@@ -1,12 +1,12 @@
 /*!
-  * CoreUI v2.0.2 (https://coreui.io)
+  * CoreUI v2.0.14 (https://coreui.io)
   * Copyright 2018 Łukasz Holeczek
   * Licensed under MIT (https://coreui.io)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('perfect-scrollbar')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'perfect-scrollbar'], factory) :
-  (factory((global.coreui = {}),global.jQuery,null));
+  (factory((global.coreui = {}),global.jQuery,global.PerfectScrollbar));
 }(this, (function (exports,$,PerfectScrollbar) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
@@ -30,7 +30,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): ajax-load.js
+   * CoreUI (v2.0.14): ajax-load.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -42,7 +42,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'ajaxLoad';
-    var VERSION = '2.0.2';
+    var VERSION = '2.0.14';
     var DATA_KEY = 'coreui.ajaxLoad';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
     var ClassName = {
@@ -235,7 +235,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): toggle-classes.js
+   * CoreUI (v2.0.14): toggle-classes.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -260,7 +260,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): aside-menu.js
+   * CoreUI (v2.0.14): aside-menu.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -272,7 +272,7 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'aside-menu';
-    var VERSION = '2.0.2';
+    var VERSION = '2.0.14';
     var DATA_KEY = 'coreui.aside-menu';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
@@ -369,7 +369,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): sidebar.js
+   * CoreUI (v2.0.14): sidebar.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -381,11 +381,14 @@
      * ------------------------------------------------------------------------
      */
     var NAME = 'sidebar';
-    var VERSION = '2.0.2';
+    var VERSION = '2.0.14';
     var DATA_KEY = 'coreui.sidebar';
     var EVENT_KEY = "." + DATA_KEY;
     var DATA_API_KEY = '.data-api';
     var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
+    var Default = {
+      transition: 400
+    };
     var ClassName = {
       ACTIVE: 'active',
       BRAND_MINIMIZED: 'brand-minimized',
@@ -400,13 +403,15 @@
       DESTROY: 'destroy',
       INIT: 'init',
       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      TOGGLE: 'toggle'
+      TOGGLE: 'toggle',
+      UPDATE: 'update'
     };
     var Selector = {
       BODY: 'body',
       BRAND_MINIMIZER: '.brand-minimizer',
       NAV_DROPDOWN_TOGGLE: '.nav-dropdown-toggle',
       NAV_DROPDOWN_ITEMS: '.nav-dropdown-items',
+      NAV_ITEM: '.nav-item',
       NAV_LINK: '.nav-link',
       NAVIGATION_CONTAINER: '.sidebar-nav',
       NAVIGATION: '.sidebar-nav > .nav',
@@ -426,6 +431,7 @@
     function () {
       function Sidebar(element) {
         this._element = element;
+        this.ps = null;
         this.perfectScrollbar(Event.INIT);
         this.setActiveLink();
 
@@ -437,36 +443,54 @@
 
       // Public
       _proto.perfectScrollbar = function perfectScrollbar(event) {
-        if (typeof PerfectScrollbar !== 'undefined') {
-          var ps;
+        var _this = this;
 
+        if (typeof PerfectScrollbar !== 'undefined') {
           if (event === Event.INIT && !document.body.classList.contains(ClassName.SIDEBAR_MINIMIZED)) {
-            ps = new PerfectScrollbar(document.querySelector(Selector.NAVIGATION_CONTAINER), {
-              suppressScrollX: true
-            });
+            this.ps = this.makeScrollbar();
           }
 
           if (event === Event.DESTROY) {
-            ps = new PerfectScrollbar(document.querySelector(Selector.NAVIGATION_CONTAINER), {
-              suppressScrollX: true
-            });
-            ps.destroy();
-            ps = null;
+            this.destroyScrollbar();
           }
 
           if (event === Event.TOGGLE) {
             if (document.body.classList.contains(ClassName.SIDEBAR_MINIMIZED)) {
-              ps = new PerfectScrollbar(document.querySelector(Selector.NAVIGATION_CONTAINER), {
-                suppressScrollX: true
-              });
-              ps.destroy();
-              ps = null;
+              this.destroyScrollbar();
             } else {
-              ps = new PerfectScrollbar(document.querySelector(Selector.NAVIGATION_CONTAINER), {
-                suppressScrollX: true
-              });
+              this.ps = this.makeScrollbar(); // ToDo: find real fix for ps rtl
+
+              this.ps.isRtl = false;
             }
           }
+
+          if (event === Event.UPDATE && !document.body.classList.contains(ClassName.SIDEBAR_MINIMIZED)) {
+            // ToDo: Add smooth transition
+            setTimeout(function () {
+              _this.destroyScrollbar();
+
+              _this.ps = _this.makeScrollbar(); // ToDo: find real fix for ps rtl
+
+              _this.ps.isRtl = false;
+            }, Default.transition);
+          }
+        }
+      };
+
+      _proto.makeScrollbar = function makeScrollbar(container) {
+        if (container === void 0) {
+          container = Selector.NAVIGATION_CONTAINER;
+        }
+
+        return new PerfectScrollbar(document.querySelector(container), {
+          suppressScrollX: true
+        });
+      };
+
+      _proto.destroyScrollbar = function destroyScrollbar() {
+        if (this.ps) {
+          this.ps.destroy();
+          this.ps = null;
         }
       };
 
@@ -490,7 +514,7 @@
 
 
       _proto._addEventListeners = function _addEventListeners() {
-        var _this = this;
+        var _this2 = this;
 
         $$$1(Selector.BRAND_MINIMIZER).on(Event.CLICK, function (event) {
           event.preventDefault();
@@ -502,19 +526,24 @@
           event.stopPropagation();
           var dropdown = event.target;
           $$$1(dropdown).parent().toggleClass(ClassName.OPEN);
+
+          _this2.perfectScrollbar(Event.UPDATE);
         });
         $$$1(Selector.SIDEBAR_MINIMIZER).on(Event.CLICK, function (event) {
           event.preventDefault();
           event.stopPropagation();
           $$$1(Selector.BODY).toggleClass(ClassName.SIDEBAR_MINIMIZED);
 
-          _this.perfectScrollbar(Event.TOGGLE);
+          _this2.perfectScrollbar(Event.TOGGLE);
         });
         $$$1(Selector.SIDEBAR_TOGGLER).on(Event.CLICK, function (event) {
           event.preventDefault();
           event.stopPropagation();
           var toggle = event.currentTarget.dataset.toggle;
           toggleClasses(toggle, ShowClassNames);
+        });
+        $$$1(Selector.NAVIGATION + " > " + Selector.NAV_ITEM + " " + Selector.NAV_LINK + ":not(" + Selector.NAV_DROPDOWN_TOGGLE + ")").on(Event.CLICK, function () {
+          document.body.classList.remove('sidebar-show');
         });
       }; // Static
 
@@ -571,7 +600,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.2): get-style.js
+   * CoreUI Utilities (v2.0.14): get-style.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -638,7 +667,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.2): hex-to-rgb.js
+   * CoreUI Utilities (v2.0.14): hex-to-rgb.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -674,7 +703,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI Utilities (v2.0.2): hex-to-rgba.js
+   * CoreUI Utilities (v2.0.14): hex-to-rgba.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -714,7 +743,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): rgb-to-hex.js
+   * CoreUI (v2.0.14): rgb-to-hex.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */
@@ -739,7 +768,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * CoreUI (v2.0.2): index.js
+   * CoreUI (v2.0.14): index.js
    * Licensed under MIT (https://coreui.io/license)
    * --------------------------------------------------------------------------
    */

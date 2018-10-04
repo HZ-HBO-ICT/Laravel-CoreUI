@@ -23,36 +23,8 @@
     },
     "require": {
         "php": ">=7.1.3",
-        "laravel/framework": "^5.5|^5.7",
-        "coreui/coreui": "^2.0"
+        "laravel/framework": "^5.5|^5.7"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.js resources/assets/js/",
-        "copy-coreui-css": "cp vendor/coreui/coreui/dist/css/coreui.css resources/assets/css/",
-        "copy-coreui-js": "cp vendor/coreui/coreui/dist/js/coreui.js resources/assets/js/",
-        "copy-fontawesome-css": "cp node_modules/@fortawesome/fontawesome-free/css/all.css resources/assets/fontawesome/css/fontawesome.css",
-        "copy-fontawesome-fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ resources/assets/fontawesome/",
-        "copy-jquery": "cp node_modules/jquery/dist/jquery.js resources/assets/js/",
-        "copy-popper": "cp node_modules/popper.js/dist/esm/popper.js resources/assets/js/",
-        "copy-assets": [
-            "@copy-bootstrap",
-            "@copy-coreui-css",
-            "@copy-coreui-js",
-            "@copy-fontawesome-css",
-            "@copy-fontawesome-fonts",
-            "@copy-jquery",
-            "@copy-popper"
-        ],
-        "post-install-cmd": [
-            "@copy-assets"
-        ],
-        "post-update-cmd": [
-            "@copy-assets"
-        ]
-    },
-    "scripts-descriptions": {
-        "copy-assets": "Copy necessary dependencies from installs to resources/assets/ folder"
-    }
+    "prefer-stable": true
 }
