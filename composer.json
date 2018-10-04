@@ -33,7 +33,7 @@
         "copy-coreui-css": "cp vendor/coreui/coreui/dist/css/coreui.css resources/assets/css/",
         "copy-coreui-js": "cp vendor/coreui/coreui/dist/js/coreui.js resources/assets/js/",
         "copy-fontawesome-css": "cp node_modules/@fortawesome/fontawesome-free/css/all.css resources/assets/fontawesome/css/fontawesome.css",
-        "copy-fontawesome-fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ resources/assets/fontawesome/webfonts/",
+        "copy-fontawesome-fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ resources/assets/fontawesome/",
         "copy-jquery": "cp node_modules/jquery/dist/jquery.js resources/assets/js/",
         "copy-popper": "cp node_modules/popper.js/dist/esm/popper.js resources/assets/js/",
         "copy-assets": [
