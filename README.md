@@ -10,7 +10,7 @@ It also incorporates a replacement command for Laravel's `make:auth` command tha
 ## Installation
 
 ```bash
-$ composer require hz-bho-ict/laravel-core-ui
+$ composer require hz-hbo-ict/laravel-core-ui
 $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=assets
 ```
 
