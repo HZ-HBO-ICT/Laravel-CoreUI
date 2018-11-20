@@ -3,7 +3,7 @@
 This is a very opinionated package designed to help our freshman year's students with rapid prototyping of web applications.
 
 The package is based upon [CoreUI](https://coreui.io/), with every plugin we deemed unnecessary removed.
-It builds upon the latest LTS and stable releases of [Laravel](https://laravel.com). As of now, those are respectively `5.5` and `5.7`.
+It builds upon the latest stable releases of [Laravel 5](https://laravel.com). As of now, that is version `5.7`.
 
 It also incorporates a replacement command for Laravel's `make:auth` command that uses CoreUI styled views for a more consistent user experience.
 
@@ -16,6 +16,8 @@ $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider"
 
 ## Usage
 
+For all the available CoreUI components, see [the official demo](https://coreui.io/demo/#main.html) and [the official documentation](https://coreui.io/docs/getting-started/introduction/).
+
 To use the template, create a blade file and extend the layout with `@extends('coreui::master')`.
 
 This template yields multiple sections, all of them optional:
@@ -24,8 +26,8 @@ This template yields multiple sections, all of them optional:
 ---|---
 `title`|for `<title>` tag
 `content`|for all of the content
-`css`|for extra CSS files (loads after CoreUI!)
-`js`|for extra JavaScript (loads after CoreUI!)
+`css`|for additional CSS files
+`js`|for additional JavaScript files
 
 A page can look like this:
 
@@ -58,7 +60,7 @@ $ php artisan make:coreui
 
 ## Configuration
 
-To edit site title, menu and many other things, publish the configuration file:
+To edit site title, menu and other things, publish the configuration file:
 
 ```bash
 $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=config
