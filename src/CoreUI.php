@@ -36,6 +36,10 @@ class CoreUI
         $this->container = $container;
     }
 
+    /**
+     * Returns the generated menu
+     * @return array
+     */
     public function menu(): array
     {
         if (! $this->menu) {
@@ -45,7 +49,7 @@ class CoreUI
         return $this->menu;
     }
 
-    protected function buildMenu(): array
+    private function buildMenu(): array
     {
         $builder = new Builder($this->buildFilters());
 
@@ -54,7 +58,7 @@ class CoreUI
         return $builder->getMenu();
     }
 
-    protected function buildFilters(): array
+    private function buildFilters(): array
     {
         return array_map([$this->container, 'make'], $this->filters);
     }

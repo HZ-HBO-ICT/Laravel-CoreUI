@@ -25,7 +25,7 @@ class ActiveChecker
     }
 
     /**
-     * Checks whether the current menu item should be highlighted
+     * Checks whether the current menu item should be highlighted in the menu
      * @param array $item
      * @return bool
      */
