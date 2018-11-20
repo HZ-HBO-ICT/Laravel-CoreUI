@@ -2,9 +2,16 @@
 
 namespace HzHboIct\LaravelCoreUI;
 
+use HzHboIct\LaravelCoreUI\Events\BuildingMenu;
+use HzHboIct\LaravelCoreUI\Http\ViewComposers\CoreUIComposer;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Contracts\View\Factory;
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    public function boot()
+    public function boot(Factory $view, Dispatcher $events, Repository $config)
     {
         $this->loadViewsFrom(
             $this->getPathFromPackageRoot('resources/views'),
@@ -14,11 +21,32 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishConfig();
         $this->publishAssets();
         $this->publishViews();
+        $this->registerViewComposers($view);
+        static::registerMenu($events, $config);
     }
 
     public function register()
     {
-        $this->mergeConfigFrom($this->getPathFromPackageRoot('config/coreui.php'), 'coreui');
+        $this->app->singleton(CoreUI::class, function (Container $app) {
+            return new CoreUI(
+                $app['config']['coreui.filters'],
+                $app['events'],
+                $app
+            );
+        });
+    }
+
+    /**
+     * Builds the menu whenever the BuildingMenu event is fired
+     * @param Dispatcher $events
+     * @param Repository $config
+     */
+    public static function registerMenu(Dispatcher $events, Repository $config)
+    {
+        $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($config) {
+            $menu = $config->get('coreui.menu');
+            call_user_func_array([$event->menu, 'add'], $menu);
+        });
     }
 
     private function getPathFromPackageRoot(string $path): string
@@ -31,6 +59,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->getPathFromPackageRoot('config/coreui.php') => config_path('coreui.php')
         ], 'config');
+
+        $this->mergeConfigFrom($this->getPathFromPackageRoot('config/coreui.php'), 'coreui');
     }
 
     private function publishAssets(): void
@@ -45,5 +75,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->getPathFromPackageRoot('resources/views/') => resource_path('views/coreui'),
         ], 'views');
+    }
+
+    private function registerViewComposers(Factory $view): void
+    {
+        $view->composer('coreui::master', CoreUIComposer::class);
     }
 }

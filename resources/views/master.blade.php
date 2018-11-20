@@ -48,51 +48,9 @@
     <div class="sidebar">
         <nav class="sidebar-nav">
             <ul class="nav">
-                @foreach(config('coreui.menu') as $item)
-                    @if(is_string($item))
-                        <li class="nav-title">{{ $item }}</li>
-                    @else
-                        @if(isset($item['submenu']))
-                            <li class="nav-item nav-dropdown">
-                                <a class="nav-link nav-dropdown-toggle" href="#">
-                                    @if(isset($item['icon'])) <i class="nav-icon fa fa-{{ $item['icon'] }}"></i> @endif
-                                    {{ $item['text'] }}
-                                </a>
-                                <ul class="nav-dropdown-items">
-                                    {{-- TODO Write this into a function with the menu builder --}}
-                                    {{--<li class="nav-item nav-dropdown">--}}
-                                        {{--<a class="nav-link nav-dropdown-toggle" href="#">--}}
-                                            {{--<i class="nav-icon fa fa-arrow-down"></i> Dropdown</a>--}}
-                                        {{--<ul class="nav-dropdown-items">--}}
-                                            {{--<li class="nav-item">--}}
-                                                {{--<a class="nav-link" href="https://fontawesome.com/v5.3.1/icons?d=gallery">--}}
-                                                    {{--<i class="nav-icon icon-star"></i> FA Icons--}}
-                                                    {{--<span class="badge badge-success">NEW</span>--}}
-                                                {{--</a>--}}
-                                            {{--</li>--}}
-                                        {{--</ul>--}}
-                                    {{--</li>--}}
-                                </ul>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a
-                                    @if(isset($item['url'])) href="{{ url($item['url']) }}" @endif
-                                    @if(isset($item['route'])) href="{{ route($item['route']) }}" @endif
-                                    @if(isset($item['target'])) target="{{ $item['target'] }}" @endif
-                                    class="nav-link"
-                                >
-                                    @if(isset($item['icon'])) <i class="nav-icon fa fa-{{ $item['icon'] }}"></i> @endif
-                                    {{ $item['text'] }}
-                                </a>
-
-                            </li>
-                        @endif
-                    @endif
-                @endforeach
+                @each('coreui::menu-item', $coreUI->menu(), 'item')
             </ul>
         </nav>
-        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
         <div class="container-fluid">
@@ -102,11 +60,11 @@
 </div>
 <footer class="app-footer">
     <div>
-        <span>&copy; 2018 HZ University of Applied Sciences</span>
+        <span>&copy; {{ \Carbon\Carbon::now()->year }} HZ University of Applied Sciences</span>
     </div>
     <div class="ml-auto">
-        <span>Powered by</span>
-        <a href="https://coreui.io">CoreUI</a>
+        <span>Powered by </span><a target="_blank" href="https://coreui.io">CoreUI</a>,
+        <span>inspired by </span><a target="_blank" href="https://github.com/jeroennoten/Laravel-AdminLTE">Laravel-AdminLTE</a>
     </div>
 </footer>
 

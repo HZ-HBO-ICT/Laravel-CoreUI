@@ -49,5 +49,16 @@ return [
                 ]
             ]
         ]
-    ]
+    ],
+
+    /**
+     * Filters that parse above menu configuration and add some sparkling things, like .active classes on active
+     * menu items and parsing routes and URLs into the correct href attributes.
+     */
+    'filters' => [
+        HzHboIct\LaravelCoreUI\Menu\Filters\HrefFilter::class,
+        HzHboIct\LaravelCoreUI\Menu\Filters\ActiveFilter::class,
+        HzHboIct\LaravelCoreUI\Menu\Filters\SubmenuFilter::class,
+        HzHboIct\LaravelCoreUI\Menu\Filters\ClassesFilter::class,
+    ],
 ];
