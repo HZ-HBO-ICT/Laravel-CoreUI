@@ -36,10 +36,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Level one',
+                    'icon' => 'bell',       // Tip: always set icons. Submenus in particular tend to get misaligned plus it's more accessible and user friendly.
                     'url' => 'admin/settings/level-one'
                 ],
                 [
                     'text' => 'Level two',
+                    'icon' => 'clock',
                     'submenu' => [
                         [
                             'text' => 'Add as many as you like',
