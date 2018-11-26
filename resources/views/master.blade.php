@@ -54,6 +54,9 @@
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">@yield('title', config('coreui.title', 'CoreUI Laravel Theme by HZ-HBO-ICT'))</li>
+        </ol>
         <div class="container-fluid">
             @yield('body')
         </div>
