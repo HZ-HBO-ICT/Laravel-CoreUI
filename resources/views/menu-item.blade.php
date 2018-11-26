@@ -11,7 +11,7 @@
         </ul>
     </li>
 @else
-    <li class="{{ $item['class'] }}">
+    <li class="nav-item {{ $item['class'] }}">
         <a href="{{ $item['href'] }}"
            @if(isset($item['target'])) target="{{ $item['target'] }}" @endif
             class="nav-link"

@@ -51,6 +51,7 @@
                 @each('coreui::menu-item', $coreUI->menu(), 'item')
             </ul>
         </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
         <div class="container-fluid">
