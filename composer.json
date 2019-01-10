@@ -7,6 +7,10 @@
         {
             "name": "Loek van der Linde",
             "email": "loek.linde@hz.nl"
+        },
+        {
+            "name": "Gert de Pagter",
+            "email": "backendtea@gmail.com"
         }
     ],
     "autoload": {
