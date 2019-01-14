@@ -2,6 +2,7 @@
 
 namespace HzHboIct\LaravelCoreUI;
 
+use HzHboIct\LaravelCoreUI\Console\CoreUIMakeCommand;
 use HzHboIct\LaravelCoreUI\Events\BuildingMenu;
 use HzHboIct\LaravelCoreUI\Http\ViewComposers\CoreUIComposer;
 use Illuminate\Contracts\Config\Repository;
@@ -20,6 +21,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->publishConfig();
         $this->publishAssets();
+        $this->publishCommands();
         $this->publishViews();
         $this->registerViewComposers($view);
         static::registerMenu($events, $config);
@@ -68,6 +70,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->getPathFromPackageRoot('resources/assets/') => public_path('vendor/coreui')
         ], 'assets');
+    }
+
+    private function publishCommands(): void
+    {
+        $this->commands(CoreUIMakeCommand::class);
     }
 
     private function publishViews(): void
