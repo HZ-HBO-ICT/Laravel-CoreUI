@@ -25,7 +25,7 @@ This template yields multiple sections, all of them optional:
 `section`|explanation
 ---|---
 `title`|for `<title>` tag
-`content`|for all of the content
+`body`|for all of the content
 `css`|for additional CSS files
 `js`|for additional JavaScript files
 
@@ -40,7 +40,7 @@ A page can look like this:
 
 @section('title', 'Dashboard')
 
-@section('content')
+@section('body')
     <h1>Dashboard</h1>
     <p>Welcome to this awesome web app!</p>
 @endsection

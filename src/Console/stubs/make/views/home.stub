@@ -4,7 +4,7 @@
 
 @section('body')
     <p>You are logged in!</p>
-    <p>See the <a href="https://coreui.io/docs/getting-started/introduction/" target="_blank">official CoreUI docs</a> to see how to build your amazing app!
+    <p>See the <a href="https://coreui.io/docs/getting-started/introduction/" target="_blank">official CoreUI docs</a> to see how to build your amazing app!</p>
 
     <div class="row">
         <div class="col">
