@@ -32,7 +32,7 @@ This template yields multiple sections, all of them optional:
 A page can look like this:
 
 ```php
-@extends('coreui:master')
+@extends('coreui::master')
 
 @push('css')
     <link rel="stylesheet" type="text/css" href="/url/to/stylesheet.css">
