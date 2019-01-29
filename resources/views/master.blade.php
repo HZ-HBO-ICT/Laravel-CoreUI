@@ -20,7 +20,10 @@
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{ url('/') }}">{!! config('coreui.logo') !!}</a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <span class="navbar-brand-full">{!! config('coreui.logo') !!}</span>
+            <span class="navbar-brand-minimized">{!! config('coreui.logo_mini') !!}</span>
+        </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
         </button>
