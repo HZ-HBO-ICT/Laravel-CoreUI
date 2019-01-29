@@ -11,6 +11,10 @@
         {
             "name": "Gert de Pagter",
             "email": "backendtea@gmail.com"
+        },
+        {
+            "name": "Daan de Waard",
+            "email": "daan.de.waard@hz.nl"
         }
     ],
     "autoload": {
