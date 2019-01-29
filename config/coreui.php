@@ -8,7 +8,7 @@ return [
     'title' => 'CoreUI Laravel Theme by HZ-HBO-ICT',
 
     /*
-     * Text to put in the top-left of the menu bar
+     * Text to put in the top-left of the menu bar. logo_mini is shown when the navbar is collapsed.
      * NOTE: This is a non-escaped string, so you can put HTML in here
      */
     'logo' => 'Core<strong>UI</strong>',
