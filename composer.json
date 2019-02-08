@@ -15,6 +15,10 @@
         {
             "name": "Daan de Waard",
             "email": "daan.de.waard@hz.nl"
+        },
+        {
+            "name": "Daniel de Cloet",
+            "email": "djdecloet@gmail.com"
         }
     ],
     "autoload": {
