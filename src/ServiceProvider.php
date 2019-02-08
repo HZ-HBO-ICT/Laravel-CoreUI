@@ -19,6 +19,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             'coreui'
         );
 
+        $this->loadTranslations();
         $this->publishConfig();
         $this->publishAssets();
         $this->publishCommands();
@@ -88,4 +89,17 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $view->composer('coreui::master', CoreUIComposer::class);
     }
+
+    private function loadTranslations()
+    {
+        $translationsPath = $this->getPathFromPackageRoot('resources/lang');
+
+        $this->loadTranslationsFrom($translationsPath, 'coreui');
+
+        $this->publishes([
+            $translationsPath => base_path('resources/lang/vendor/coreui'),
+        ], 'translations');
+    }
+
+
 }
