@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <div class="card mx-4">
                 <div class="card-body p-4">
-                    <h1>Register</h1>
+                    <h1>{{ __('coreui::coreui.register') }}</h1>
                     <p class="text-muted">{{ __('coreui::coreui.register_message') }}</p>
 
                     <form action="{{ route('register') }}" method="post">
@@ -73,15 +73,17 @@
                                    name="password_confirmation" placeholder="{{ __('coreui::coreui.retype_password') }}" required>
                         </div>
 
-                        <button class="btn btn-block btn-success" type="submit">Create Account</button>
-                    </form>
-                </div>
-                <div class="card-footer p-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <a class="btn btn-outline-primary btn-block" href="{{ route('login') }}">Login</a>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary px-4"
+                                        type="submit">{{ __('coreui::coreui.register') }}</button>
+                            </div>
+                            <div class="col-8 text-right">
+                                <a class="btn btn-link px-0"
+                                   href="{{ route('login') }}">{{ __('coreui::coreui.i_already_have_a_membership') }}</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

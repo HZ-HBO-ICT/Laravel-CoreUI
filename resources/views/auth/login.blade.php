@@ -52,13 +52,15 @@
                                 @endif
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <button class="btn btn-primary px-4"
                                             type="submit">{{ __('coreui::coreui.sign_in') }}</button>
                                 </div>
-                                <div class="col-6 text-right">
+                                <div class="col-8 text-right">
                                     <a class="btn btn-link px-0"
                                        href="{{ route('password.request') }}">{{ __('coreui::coreui.i_forgot_my_password') }}</a>
+                                    <a class="btn btn-link px-0"
+                                       href="{{ route('register') }}">{{ __('coreui::coreui.register_a_new_membership') }}</a>
                                 </div>
                             </div>
                         </form>

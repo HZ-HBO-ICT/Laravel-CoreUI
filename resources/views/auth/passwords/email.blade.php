@@ -22,7 +22,7 @@
                         @csrf
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                             </div>
 
                             <input id="email" type="email"
