@@ -23,7 +23,7 @@ class CoreUIMakeCommand extends AuthMakeCommand
         ];
 
         foreach ($views as $stub => $view) {
-            copy(__DIR__.'/stubs/make/views/' . $stub, base_path('resources/views/' . $view));
+            copy(__DIR__.'/stubs/make/views/' . $stub, base_path('resources/views/vendor/' . $view));
         }
     }
 }

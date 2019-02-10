@@ -21,6 +21,6 @@ return [
     'password_reset_message'      => 'Wachtwoord herstellen',
     'reset_password'              => 'Wachtwoord herstellen',
     'send_password_reset_link'    => 'Stuur email met link voor wachtwoordherstel',
-    'enter_email_message'         => 'Vul uw email addres in',
+    'enter_email_message'         => 'Vul uw e-mailadres in',
 
 ];
