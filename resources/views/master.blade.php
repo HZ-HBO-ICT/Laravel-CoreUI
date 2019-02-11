@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     @stack('css')
 
-    <title>@yield('title', config('coreui.title', 'CoreUI Laravel Theme by HZ-HBO-ICT'))</title>
+    <title>@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</title>
 </head>
 <body class="app header-fixed sidebar-fixed sidebar-lg-show">
 <header class="app-header navbar">
@@ -30,15 +30,17 @@
         <ul class="nav ml-auto">
             <li class="nav-item dropdown">
                 @if (\Illuminate\Support\Facades\Auth::user() !== null)
-                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                       aria-expanded="false">
                         <i class="fa fa-user-cog"></i> {{ \Illuminate\Support\Facades\Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-header text-center">
-                            <strong>Settings</strong>
+                            <strong>{{ __('coreui::coreui.settings') }}</strong>
                         </div>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt"></i> Logout
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fas fa-sign-out-alt"></i> {{ __('coreui::coreui.log_out') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                             @csrf
@@ -60,7 +62,7 @@
     </div>
     <main class="main">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">@yield('title', config('coreui.title', 'CoreUI Laravel Theme by HZ-HBO-ICT'))</li>
+            <li class="breadcrumb-item active">@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</li>
         </ol>
         <div class="container-fluid">
             @yield('body')
@@ -77,15 +79,15 @@
     </div>
 </footer>
 
-    <!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
-    <script src="{{ asset('vendor/coreui/js/jquery.js') }}"></script>
-    <script src="{{ asset('vendor/coreui/js/popper.js') }}"></script>
-    <script src="{{ asset('vendor/coreui/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('vendor/coreui/js/perfect-scrollbar.js') }}"></script>
-    <script src="{{ asset('vendor/coreui/js/coreui.js') }}"></script>
-    <script src="{{ asset('vendor/coreui/js/coreui-utilities.js') }}"></script>
+<!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
+<script src="{{ asset('vendor/coreui/js/jquery.js') }}"></script>
+<script src="{{ asset('vendor/coreui/js/popper.js') }}"></script>
+<script src="{{ asset('vendor/coreui/js/bootstrap.js') }}"></script>
+<script src="{{ asset('vendor/coreui/js/perfect-scrollbar.js') }}"></script>
+<script src="{{ asset('vendor/coreui/js/coreui.js') }}"></script>
+<script src="{{ asset('vendor/coreui/js/coreui-utilities.js') }}"></script>
 
-    <!-- Custom JS -->
-    @stack('js')
+<!-- Custom JS -->
+@stack('js')
 </body>
 </html>

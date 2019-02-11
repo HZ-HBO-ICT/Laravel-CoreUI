@@ -78,6 +78,18 @@ $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider"
 
 You can now edit them under `resources/views/vendor/coreui`.
 
+## Translations
+
+At the moment, English and Dutch translations are available out of the box.
+Just specifiy the language in `config/app.php`.
+If you need to modify the texts or add other languages, you can publish the language files:
+
+```
+php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=translations
+```
+
+Now, you can edit translations or add languages in `resources/lang/vendor/coreui`.
+
 ## Updating the package
 
 To update the package, run the following command. Note that this **will** overwrite any changes you've made in the published files.

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/coreui/fontawesome/css/fontawesome.css') }}">
 
-    <title>Register</title>
+    <title>{{ __('coreui::coreui.register') }}</title>
 </head>
 <body class="app flex-row align-items-center">
 <div class="container">
@@ -16,8 +16,8 @@
         <div class="col-md-6">
             <div class="card mx-4">
                 <div class="card-body p-4">
-                    <h1>Register</h1>
-                    <p class="text-muted">Create your account</p>
+                    <h1>{{ __('coreui::coreui.register') }}</h1>
+                    <p class="text-muted">{{ __('coreui::coreui.register_message') }}</p>
 
                     <form action="{{ route('register') }}" method="post">
                         @csrf
@@ -27,10 +27,13 @@
                                 <span class="input-group-text"><i class="fa fa-user"></i></span>
                             </div>
 
-                            <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}"  placeholder="Username" required autofocus>
+                            <input id="name" type="text"
+                                   class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
+                                   value="{{ old('name') }}" placeholder="{{ __('coreui::coreui.full_name') }}" required autofocus>
 
                             @if ($errors->has('name'))
-                                <span class="invalid-feedback" role="alert"><strong>{{ $errors->first('name') }}</strong></span>
+                                <span class="invalid-feedback"
+                                      role="alert"><strong>{{ $errors->first('name') }}</strong></span>
                             @endif
                         </div>
                         <div class="input-group mb-3">
@@ -38,10 +41,13 @@
                                 <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                             </div>
 
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email" required>
+                            <input id="email" type="email"
+                                   class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
+                                   value="{{ old('email') }}" placeholder="{{ __('coreui::coreui.email') }}" required>
 
                             @if ($errors->has('email'))
-                                <span class="invalid-feedback" role="alert"><strong>{{ $errors->first('email') }}</strong></span>
+                                <span class="invalid-feedback"
+                                      role="alert"><strong>{{ $errors->first('email') }}</strong></span>
                             @endif
                         </div>
                         <div class="input-group mb-3">
@@ -49,10 +55,13 @@
                                 <span class="input-group-text"><i class="fa fa-lock"></i></span>
                             </div>
 
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"  placeholder="Password" name="password" required>
+                            <input id="password" type="password"
+                                   class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                                   placeholder="{{ __('coreui::coreui.password') }}" name="password" required>
 
                             @if ($errors->has('password'))
-                                <span class="invalid-feedback" role="alert"><strong>{{ $errors->first('password') }}</strong></span>
+                                <span class="invalid-feedback"
+                                      role="alert"><strong>{{ $errors->first('password') }}</strong></span>
                             @endif
                         </div>
                         <div class="input-group mb-4">
@@ -60,18 +69,21 @@
                                 <span class="input-group-text"><i class="fa fa-redo"></i></span>
                             </div>
 
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Repeat password" required>
+                            <input id="password-confirm" type="password" class="form-control"
+                                   name="password_confirmation" placeholder="{{ __('coreui::coreui.retype_password') }}" required>
                         </div>
 
-                        <button class="btn btn-block btn-success" type="submit">Create Account</button>
-                    </form>
-                </div>
-                <div class="card-footer p-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <a class="btn btn-outline-primary btn-block" href="{{ route('login') }}">Login</a>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-primary px-4"
+                                        type="submit">{{ __('coreui::coreui.register') }}</button>
+                            </div>
+                            <div class="col-8 text-right">
+                                <a class="btn btn-link px-0"
+                                   href="{{ route('login') }}">{{ __('coreui::coreui.i_already_have_a_membership') }}</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
