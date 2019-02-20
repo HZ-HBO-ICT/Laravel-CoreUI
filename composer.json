@@ -1,6 +1,6 @@
 {
     "name": "hz-hbo-ict/laravel-core-ui",
-    "description": "Very opinionated implementation of CoreUI within Laravel",
+    "description": "Easy to use package with authentication scaffold that provides an easy implementation of CoreUI within Laravel",
     "type": "library",
     "license": "MIT",
     "authors": [

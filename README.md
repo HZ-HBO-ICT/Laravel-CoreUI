@@ -1,5 +1,9 @@
 # Laravel CoreUI integration
 
+[![Latest Stable Version](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/v/stable)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
+[![Total Downloads](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/downloads)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
+[![License](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/license)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
+
 This is a very opinionated package designed to help our freshman year's students with rapid prototyping of web applications.
 
 The package is based upon [CoreUI](https://coreui.io/), with every plugin we deemed unnecessary removed.
