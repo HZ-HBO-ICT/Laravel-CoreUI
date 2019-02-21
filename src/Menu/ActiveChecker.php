@@ -43,11 +43,6 @@ class ActiveChecker
             return $this->checkExactOrSub($item['href']);
         }
 
-        // Support URL for backwards compatibility
-//        if (isset($item['url'])) {
-//            return $this->checkExactOrSub($item['url']);
-//        }
-
         return false;
     }
     
