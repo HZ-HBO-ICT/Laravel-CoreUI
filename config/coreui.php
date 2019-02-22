@@ -32,6 +32,7 @@ return [
 //        ],
 //        'Admin only',
 //        [
+//            'can' => 'edit-settings',       // Use Laravel's Gate functionality via the 'can' keyword to show menu items to specific user (roles)
 //            'text' => 'Settings',
 //            'icon' => 'cog',
 //            'submenu' => [
