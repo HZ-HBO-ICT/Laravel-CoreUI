@@ -3,7 +3,7 @@
 @elseif(isset($item['submenu']))
     <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
-            @if(isset($item['icon'])) <i class="nav-icon fa fa-{{ $item['icon'] }}"></i> @endif
+            @if(isset($item['icon'])) <i class="nav-icon fa-{{ $item['icon'] }}"></i> @endif
             {{ $item['text'] }}
         </a>
         <ul class="nav-dropdown-items">
@@ -16,7 +16,7 @@
            @if(isset($item['target'])) target="{{ $item['target'] }}" @endif
             class="nav-link"
         >
-            @if(isset($item['icon'])) <i class="nav-icon fa fa-{{ $item['icon'] }}"></i> @endif
+            @if(isset($item['icon'])) <i class="nav-icon fa-{{ $item['icon'] }}"></i> @endif
             {{ $item['text'] }}
         </a>
     </li>

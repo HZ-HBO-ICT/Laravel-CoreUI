@@ -21,14 +21,14 @@ return [
 //        [
 //            'text' => 'Dashboard',          // The text to be displayed inside the menu.
 //            'url' => 'admin/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
-//            'icon' => 'chart-bar',          // Name of FontAwesome icon to display.
+//            'icon' => 'chart-bar far',      // Name of FontAwesome icon to display. Note that you have to use the "far", "fas" or "fal" modifier behind the icon.
 //            'target' => '_blank',           // Target attribute of <a> tag.
 //        ],
 //        'First section',                    // Section header
 //        [
 //            'text' => 'Users',
 //            'route' => 'admin.users',       // The route behind the text. Mutually exclusive with "url" option.
-//            'icon' => 'users'
+//            'icon' => 'users fas'
 //        ],
 //        'Admin only',
 //        [
