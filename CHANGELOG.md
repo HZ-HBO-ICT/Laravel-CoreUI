@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2019-02-27
+## Changed
+- Update to newest stable Laravel release - 5.8
+
+## [1.4.0] - 2019-02-25
+## Changed
+- Updated icon naming in config to adhere to newest FontAwesome naming
+
 ## [1.3.1] - 2019-02-22
 ## Changed
 - Updated CoreUI to latest version
