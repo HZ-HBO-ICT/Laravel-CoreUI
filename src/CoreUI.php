@@ -53,7 +53,7 @@ class CoreUI
     {
         $builder = new Builder($this->buildFilters());
 
-        $this->events->fire(new BuildingMenu($builder));
+        $this->events->dispatch(new BuildingMenu($builder));
 
         return $builder->getMenu();
     }
