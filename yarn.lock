@@ -16,9 +16,9 @@
   integrity sha512-yeeoWp+bNS84nP1977Y8UCiQ9pssO+f4QuVj3i0/gYZFjjvOgxx0dnyWhtowD5sLYnCRMPlPpqyjwXze3SlkYg==
 
 "@coreui/coreui@^2.0.14":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-2.1.7.tgz#a7c9872377f7d224d32fe1c9d110de6c58b3bd59"
-  integrity sha512-921Qi1ujd8yUhLdwMggEnEPEOr/OX9mAKjJitH4PaEGFTCmPL2Fb00wuWUzUN0uTRekCmkns1Zt1hJ1ezigG6g==
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-2.1.8.tgz#9246359da602487a693af0215fc3bbcbbd21ad87"
+  integrity sha512-YyGfMNcu47QbRpUoMejVXOFcKBL4huWy3szhIC2VIrzxufB5LZq9qOrVf2n25NeBtVCw5Y4Y2oIoN0k998U8ww==
   dependencies:
     "@babel/polyfill" "^7.2.5"
     "@coreui/coreui-plugin-npm-postinstall" "^1.0.2"
@@ -36,7 +36,7 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-bootstrap@^4.1.3, bootstrap@^4.3.1:
+bootstrap@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
   integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
