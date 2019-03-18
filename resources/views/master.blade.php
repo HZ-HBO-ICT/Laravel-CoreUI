@@ -62,7 +62,7 @@
     </div>
     <main class="main">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</li>
+            @yield('breadcrumb', config('coreui.title', __('coreui::coreui.default_title')))
         </ol>
         <div class="container-fluid">
             @yield('body')
