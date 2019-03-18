@@ -29,6 +29,7 @@ This template yields multiple sections, all of them optional:
 `section`|explanation
 ---|---
 `title`|for `<title>` tag
+`breadcrumb`|for breadcrumb bar 
 `body`|for all of the content
 `css`|for additional CSS files
 `js`|for additional JavaScript files
@@ -43,6 +44,12 @@ A page can look like this:
 @endpush
 
 @section('title', 'Dashboard')
+
+@section('breadcrumb')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">a breadcrumb item</li>
+    </ol>
+@stop
 
 @section('body')
     <h1>Dashboard</h1>
