@@ -46,7 +46,9 @@ A page can look like this:
 @section('title', 'Dashboard')
 
 @section('breadcrumb')
-    <li class="breadcrumb-item">a breadcrumb item</li>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">a breadcrumb item</li>
+    </ol>
 @stop
 
 @section('body')

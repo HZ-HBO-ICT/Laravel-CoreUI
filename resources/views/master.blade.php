@@ -61,9 +61,9 @@
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
-        <ol class="breadcrumb">
+        <div aria-label="breadcrumb">
             @yield('breadcrumb', config('coreui.title', __('coreui::coreui.default_title')))
-        </ol>
+        </div>
         <div class="container-fluid">
             @yield('body')
         </div>
