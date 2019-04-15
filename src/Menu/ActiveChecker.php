@@ -58,7 +58,7 @@ class ActiveChecker
 
     private function checkSub($url): bool
     {
-        return $this->checkPattern($url.'/*');
+        return $this->checkPattern($url.'/*') || $this->checkPattern($url.'?*');
     }
 
     private function checkPattern($pattern): bool
