@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.0] - 2019-05-22
+## Fixed
+- Numerous 404 erros in console because .map files weren't in their right places
+## Added
+- Collapsed sidebar now stays collapsed on other pages, until it is decollapsed again
+
 ## [2.4.1] - 2019-05-22
 ## Changed
 - Update minor dependencies
