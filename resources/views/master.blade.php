@@ -62,7 +62,7 @@
     </div>
     <main class="main">
         <div aria-label="breadcrumb">
-            @yield('breadcrumb', config('coreui.title', __('coreui::coreui.default_title')))
+            @yield('breadcrumb')
         </div>
         <div class="container-fluid">
             @yield('body')
