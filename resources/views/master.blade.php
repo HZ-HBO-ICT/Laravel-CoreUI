@@ -14,7 +14,7 @@
 
     <title>@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</title>
 </head>
-<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<body class="app header-fixed sidebar-fixed sidebar-lg-show sidebar-minimized brand-minimized">
 <header class="app-header navbar">
     <div class="container-fluid">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
@@ -80,6 +80,7 @@
 </footer>
 
 <!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
+<script src="{{ asset('vendor/coreui/js/remember-sidebar.js') }}"></script>
 <script src="{{ asset('vendor/coreui/js/jquery.js') }}"></script>
 <script src="{{ asset('vendor/coreui/js/popper.js') }}"></script>
 <script src="{{ asset('vendor/coreui/js/bootstrap.js') }}"></script>
