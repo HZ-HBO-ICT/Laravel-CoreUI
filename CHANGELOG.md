@@ -4,97 +4,101 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2019-05-27
+### Fixed
+- Added comments to config file to clear untransparant use of 'can' funtionality
+
 ## [2.5.0] - 2019-05-22
-## Fixed
+### Fixed
 - Numerous 404 erros in console because .map files weren't in their right places
-## Added
+### Added
 - Collapsed sidebar now stays collapsed on other pages, until it is decollapsed again
 
 ## [2.4.1] - 2019-05-22
-## Changed
+### Changed
 - Update minor dependencies
 
 ## [2.4.0] - 2019-05-06
-## Changed
+### Changed
 - Update jQuery to 3.4.1 to resolve security vulnerability
 
 ## [2.3.2] - 2019-04-15
-## Fixed
+### Fixed
 - A bug that caused URL parameters (`www.example.com/page?id=15`) to not trigger active classes on menu items
 
 ## [2.3.1] - 2019-03-26
-## Changed
+### Changed
 - Email address in composer.json file that caused Composer to do a confuse
 
 ## [2.3.0] - 2019-03-22
-## Changed
+### Changed
 - Update to CoreUI 2.1.9
 
 ## [2.2.0] - 2019-03-18
-## Changed
+### Changed
 - Adds menu translations
 - Make breadcrumb section editable
 
 ## [2.1.0] - 2019-03-11
-## Changed
+### Changed
 - Update to CoreUI 2.1.8
 
 ## [2.0.1] - 2019-02-27
-## Fixed
+### Fixed
 - Bug that was caused by using the `fire` method on the Event Dispatcher of the menu builder
 
 ## [2.0.0] - 2019-02-27
-## Changed
+### Changed
 - Update to newest stable Laravel release - 5.8
 
 ## [1.4.0] - 2019-02-25
-## Changed
+### Changed
 - Updated icon naming in config to adhere to newest FontAwesome naming
 
 ## [1.3.1] - 2019-02-22
-## Changed
+### Changed
 - Updated CoreUI to latest version
 
 ## [1.3.0] - 2019-02-22
-## Added
+### Added
 - Menu filter to easily integrate Laravel's Gate functionality via the `coreui.php` config file
-## Fixed
+### Fixed
 - Bug that caused `make:coreui` command to push views to the wrong folder, resulting in an exception
 
 ## [1.2.3] - 2019-02-20
-## Nothing
+### Nothing
 This tag actually references tag 1.2.2
 
 ## [1.2.2] - 2019-02-20
-## Changed
+### Changed
 - Updated README with cool badges
 - Updated composer.json with correct package description
 
 ## [1.2.1] - 2019-02-20
-## Changed
+### Changed
 - Updated FontAwesome and Bootstrap to latest version
 
 ## [1.2.0] - 2019-02-11
-## Added
+### Added
 - Localization and i18n for Dutch and English
 
 ## [1.1.1] - 2019-02-06
-## Fixed
+### Fixed
 - Bug that caused the views to be exported to the wrong folders
 
 ## [1.1.0] - 2019-02-04
-## Changed
+### Changed
 - Updated FontAwesome and Popper.js to latest versions
 
 ## [1.0.5] - 2019-01-29
-## Fixed
+### Fixed
 - A bug that caused to logo to overflow in the the main content upon minimizing the navbar
 
-## Added
+### Added
 - An option for a mini logo that is rendered when the navbar is minimized
 
 ## [1.0.4] - 2019-01-28
-## Fixed
+### Fixed
 - A bug where the logout button would always be rendered, leading to a hard exception if the user didn't create an authentication system
 
 ## [1.0.3] - 2019-01-14
