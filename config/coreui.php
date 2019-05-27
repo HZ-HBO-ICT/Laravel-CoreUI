@@ -32,7 +32,7 @@ return [
 //        ],
 //        'Admin only',
 //        [
-//            'can' => 'edit-settings',       // Use Laravel's Gate functionality via the 'can' keyword to show menu items to specific user (roles)
+//            'can' => 'edit-settings',       // Use Laravel's Gate functionality via the 'can' keyword to show menu items according to your Gate. Note that you need to uncomment the GateFilter in the Filters array below!
 //            'text' => 'Settings',
 //            'icon' => 'cog',
 //            'submenu' => [
@@ -64,5 +64,7 @@ return [
         HzHboIct\LaravelCoreUI\Menu\Filters\ActiveFilter::class,
         HzHboIct\LaravelCoreUI\Menu\Filters\SubmenuFilter::class,
         HzHboIct\LaravelCoreUI\Menu\Filters\ClassesFilter::class,
+        // Uncomment below filter if you want to use the 'can' functionality of the menu builder.
+        // HzHboIct\LaravelCoreUI\Menu\Filters\GateFilter::class,
     ],
 ];
