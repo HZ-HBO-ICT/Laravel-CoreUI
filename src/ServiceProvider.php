@@ -24,6 +24,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishAssets();
         $this->publishCommands();
         $this->publishViews();
+        $this->publishMiddleware();
         $this->registerViewComposers($view);
         static::registerMenu($events, $config);
     }
@@ -83,6 +84,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->getPathFromPackageRoot('resources/views/') => resource_path('views/vendor/coreui'),
         ], 'views');
+    }
+
+    private function publishMiddleware(): void
+    {
+        $this->publishes([
+            $this->getPathFromPackageRoot('src/Http/Middleware') => app_path('Http/Middleware'),
+        ], 'middleware');
     }
 
     private function registerViewComposers(Factory $view): void
