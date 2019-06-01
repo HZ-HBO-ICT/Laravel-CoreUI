@@ -14,7 +14,11 @@
 
     <title>@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</title>
 </head>
+@if(request()->cookie('remember_sidebar'))
+<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+@else
 <body class="app header-fixed sidebar-fixed sidebar-lg-show sidebar-minimized brand-minimized">
+@endif
 <header class="app-header navbar">
     <div class="container-fluid">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
