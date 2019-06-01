@@ -79,6 +79,23 @@ $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider"
 
 You can now edit it at `config/coreui.php`.
 
+## Middleware
+
+In order to be able to remember whether the user has the sidebar collapsed or expanded, a cookie is saved in the browser. This cookie is set from JavaScript, so should not be encrypted. This cookie will have to be added to the whitelist for encryption.
+
+This can be done manually by adding `'remember_sidebar'` to the EncryptCookies middleware under `protected $except`, located in `app/Http/Middleware`.
+It should at least look like this:
+```
+protected $except = [
+    'remember_sidebar'
+];
+```
+
+There is also an artisan command for it. **This does overwrite any changes you have made to the file**. 
+```
+php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=middleware --force
+```
+
 ## Customized views
 
 If you need complete control of the provided views, run:
