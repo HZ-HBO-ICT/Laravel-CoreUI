@@ -2,27 +2,20 @@
     "dependencies": {
         "@coreui/coreui": "^2.0.14",
         "@fortawesome/fontawesome-free": "^5.3.1",
-        "bootstrap": "^4.3.1",
-        "chalk": "^2.4.1",
-        "jquery": "^3.4.1",
-        "perfect-scrollbar": "^1.4.0",
-        "popper.js": "^1.14.4"
+        "jquery": "^3.4.1"
     },
     "scripts": {
-        "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.js resources/assets/js/",
-        "copy-bootstrap-map": "cp node_modules/bootstrap/dist/js/bootstrap.js.map resources/assets/js/",
-        "copy-coreui-css": "cp node_modules/@coreui/coreui/dist/css/coreui.css resources/assets/css/",
-        "copy-coreui-css-map": "cp node_modules/@coreui/coreui/dist/css/coreui.css.map resources/assets/css/",
-        "copy-coreui-js": "cp node_modules/@coreui/coreui/dist/js/coreui.js resources/assets/js/",
-        "copy-coreui-js-map": "cp node_modules/@coreui/coreui/dist/js/coreui.js.map resources/assets/js/",
-        "copy-coreui-utilities": "cp node_modules/@coreui/coreui/dist/js/coreui-utilities.js resources/assets/js/",
-        "copy-coreui-utilities-map": "cp node_modules/@coreui/coreui/dist/js/coreui-utilities.js.map resources/assets/js/",
-        "copy-fontawesome-css": "cp node_modules/@fortawesome/fontawesome-free/css/all.css resources/assets/fontawesome/css/fontawesome.css",
+        "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js resources/assets/js/",
+        "copy-bootstrap-map": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map resources/assets/js/",
+        "copy-coreui-css": "cp node_modules/@coreui/coreui/dist/css/coreui.min.css resources/assets/css/",
+        "copy-coreui-css-map": "cp node_modules/@coreui/coreui/dist/css/coreui.min.css.map resources/assets/css/",
+        "copy-coreui-js": "cp node_modules/@coreui/coreui/dist/js/coreui.min.js resources/assets/js/",
+        "copy-coreui-js-map": "cp node_modules/@coreui/coreui/dist/js/coreui.min.js.map resources/assets/js/",
+        "copy-coreui-utilities": "cp node_modules/@coreui/coreui/dist/js/coreui-utilities.min.js resources/assets/js/",
+        "copy-coreui-utilities-map": "cp node_modules/@coreui/coreui/dist/js/coreui-utilities.min.js.map resources/assets/js/",
+        "copy-fontawesome-css": "cp node_modules/@fortawesome/fontawesome-free/css/all.min.css resources/assets/fontawesome/css/fontawesome.css",
         "copy-fontawesome-fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ resources/assets/fontawesome/",
-        "copy-jquery": "cp node_modules/jquery/dist/jquery.js resources/assets/js/",
-        "copy-perfect-scrollbar-js": "cp node_modules/perfect-scrollbar/dist/perfect-scrollbar.js resources/assets/js/",
-        "copy-popper": "cp node_modules/popper.js/dist/umd/popper.js resources/assets/js/",
-        "copy-popper-map": "cp node_modules/popper.js/dist/umd/popper.js.map resources/assets/js/",
-        "copy-assets": "npm run copy-bootstrap && npm run copy-bootstrap-map && npm run copy-coreui-css && npm run copy-coreui-css-map && npm run copy-coreui-js && npm run copy-coreui-js-map && npm run copy-coreui-utilities && npm run copy-coreui-utilities-map && npm run copy-fontawesome-css && npm run copy-fontawesome-fonts && npm run copy-jquery && npm run copy-perfect-scrollbar-js && npm run copy-popper && npm run copy-popper-map"
+        "copy-jquery": "cp node_modules/jquery/dist/jquery.slim.min.js resources/assets/js/",
+        "copy-assets": "npm run copy-bootstrap && npm run copy-bootstrap-map && npm run copy-coreui-css && npm run copy-coreui-css-map && npm run copy-coreui-js && npm run copy-coreui-js-map && npm run copy-coreui-utilities && npm run copy-coreui-utilities-map && npm run copy-fontawesome-css && npm run copy-fontawesome-fonts && npm run copy-jquery"
     }
 }

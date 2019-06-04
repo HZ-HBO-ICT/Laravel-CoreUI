@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2019-06-04
+### Removed
+- Quite some manual imports of JS packages that caused technical debt because CoreUI didn't include everything it needed out of the box. This might break functionality in one or two cases, so diff the new `master.blade.php` file with the one in your project.
+### Changed
+- Updated CoreUI to version 2.1.11
+
 ## [2.6.0] - 2019-05-27
 ### Fixed
 - Added comments to config file to clear untransparant use of 'can' funtionality

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CoreUI CSS -->
-    <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/coreui/fontawesome/css/fontawesome.css') }}">
     <!-- Custom CSS -->
     @stack('css')
@@ -79,14 +79,12 @@
     </div>
 </footer>
 
-<!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
-<script src="{{ asset('vendor/coreui/js/remember-sidebar.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/jquery.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/popper.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/bootstrap.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/perfect-scrollbar.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/coreui.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/coreui-utilities.js') }}"></script>
+<!-- jQuery first, then Bootstrap, then CoreUI  -->
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/remember-sidebar.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/jquery.slim.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/bootstrap.bundle.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui-utilities.min.js') }}"></script>
 
 <!-- Custom JS -->
 @stack('js')
