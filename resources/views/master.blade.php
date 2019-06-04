@@ -52,6 +52,7 @@
     </div>
 </header>
 <div class="app-body">
+    <script type="application/javascript" src="{{ asset('vendor/coreui/js/toggle_sidebar.js') }}"></script>
     <div class="sidebar">
         <nav class="sidebar-nav">
             <ul class="nav">
@@ -59,6 +60,7 @@
             </ul>
         </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        <script type="application/javascript" src="{{ asset('vendor/coreui/js/add_listener_to_sidebar.js') }}"></script>
     </div>
     <main class="main">
         <div aria-label="breadcrumb">
@@ -80,7 +82,6 @@
 </footer>
 
 <!-- jQuery first, then Bootstrap, then CoreUI  -->
-<script type="application/javascript" src="{{ asset('vendor/coreui/js/remember-sidebar.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/jquery.slim.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/bootstrap.bundle.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.min.js') }}"></script>
