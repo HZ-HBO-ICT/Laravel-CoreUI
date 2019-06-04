@@ -28,26 +28,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="nav ml-auto">
-            <li class="nav-item dropdown">
-                @if (\Illuminate\Support\Facades\Auth::user() !== null)
-                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        <i class="fa fa-user-cog"></i> {{ \Illuminate\Support\Facades\Auth::user()->name }}
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header text-center">
-                            <strong>{{ __('coreui::coreui.settings') }}</strong>
-                        </div>
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt"></i> {{ __('coreui::coreui.log_out') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                @endif
-            </li>
+            @include('coreui::account')
         </ul>
     </div>
 </header>
