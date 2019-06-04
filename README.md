@@ -103,17 +103,16 @@ Now, you can edit translations or add languages in `resources/lang/vendor/coreui
 
 ## Updating the package
 
-To update the package, run the following command. Note that this **will** overwrite any changes you've made in the published files.
+To update the package, run the following command. Note that this **will** overwrite any changes you've made in the published asset files. Published views, config and translations need to be updated manually.
 
 ```bash
+$ composer update hz-hbo-ict/laravel-core-ui
 $ php artisan vendor:publish --provider="HzHboIct\LaravelCoreUI\ServiceProvider" --tag=assets --force
 ```
 
 ## License
 
-This packaged is licensed under the MIT License. Please note that CoreUI has different licensing, explained [here](https://coreui.io/pro/license/).
-
-If your application is free of charge and is used by one client only, you're free to do that. If any other circumstances apply, please consult the mentioned CoreUI licensing page.
+This packaged is licensed under the MIT License. 
 
 ## Acknowledgements
 
