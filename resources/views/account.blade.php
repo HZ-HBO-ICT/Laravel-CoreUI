@@ -1,5 +1,5 @@
-<li class="nav-item dropdown">
-    @if (\Illuminate\Support\Facades\Auth::user() !== null)
+@if (\Illuminate\Support\Facades\Auth::user() !== null)
+    <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
            aria-expanded="false">
 
@@ -13,7 +13,7 @@
             </div>
 
             {{-- You can add your dropdown menu items here --}}
-            {{-- use <a class="dropdown-item">  </a> tags for each menu item --}}
+            {{-- use <a class="dropdown-item"> ... </a> tags for each menu item --}}
 
             {{-- This part renders the logout part of the dropdown menu --}}
             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -24,5 +24,5 @@
                 @csrf
             </form>
         </div>
-    @endif
-</li>
+    </li>
+@endif
