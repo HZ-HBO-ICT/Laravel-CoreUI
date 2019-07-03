@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/coreui/fontawesome/css/fontawesome.css') }}">
 
     <title>{{ __('coreui::coreui.reset_password') }}</title>
@@ -70,11 +70,9 @@
 </div>
 
 <!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
-<script src="{{ asset('vendor/coreui/js/jquery.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/popper.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/bootstrap.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/perfect-scrollbar.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/coreui.js') }}"></script>
-<script src="{{ asset('vendor/coreui/js/coreui-utilities.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/jquery.slim.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/bootstrap.bundle.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui-utilities.min.js') }}"></script>
 </body>
 </html>
