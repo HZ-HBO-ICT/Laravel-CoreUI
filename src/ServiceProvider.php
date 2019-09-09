@@ -2,7 +2,7 @@
 
 namespace HzHboIct\LaravelCoreUI;
 
-use HzHboIct\LaravelCoreUI\Console\CoreUIMakeCommand;
+use HzHboIct\LaravelCoreUI\Console\CoreUIAuthCommand;
 use HzHboIct\LaravelCoreUI\Events\BuildingMenu;
 use HzHboIct\LaravelCoreUI\Http\ViewComposers\CoreUIComposer;
 use Illuminate\Contracts\Config\Repository;
@@ -75,7 +75,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     private function publishCommands(): void
     {
-        $this->commands(CoreUIMakeCommand::class);
+        $this->commands(CoreUIAuthCommand::class);
     }
 
     private function publishViews(): void

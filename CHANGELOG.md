@@ -4,9 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2019-09-09
+### Changed
+- Add compatibility to Laravel 6.0
+- Adhere to laravel/ui package structuring
+### Removed
+- Compatibility with Laravel 5
+
 ## [2.9.1] - 2019-07-02
 ### Fixed
-- File paths so that the CSS and JS on login/register like views will actually load.
+- File paths so that the CSS and JS on login/register like views will actually load
 
 ## [2.9.0] - 2019-06-13
 ### Changed
