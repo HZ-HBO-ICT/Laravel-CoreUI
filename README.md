@@ -9,7 +9,7 @@ This is an opinionated package designed to help our freshman year's students wit
 The package is based upon [CoreUI](https://coreui.io/), with every plugin we deemed unnecessary removed.
 It builds upon the latest stable releases of [Laravel](https://laravel.com). As of now, that is version `6.0`.
 
-It also incorporates a replacement command for Laravel's [`make:auth`](https://laravel.com/docs/6.0/authentication#introduction) command that uses CoreUI styled views for a more consistent user experience.
+It also incorporates a replacement command for Laravel's [`ui:auth`](https://laravel.com/docs/6.0/authentication#introduction) command that uses CoreUI styled views for a more consistent user experience.
 
 The result is an easy to use package that can setup a secure and complete dashboard front-end in a matter of seconds. Adding new views and features is a breeze and doesn't disrupt your normal workflow.
 
@@ -65,10 +65,10 @@ A page can look like this:
 
 ## CoreUI authentication views
 
-There's a command `make:coreui` that behaves just like the built-in `make:auth` command, but it replaces the default views with [CoreUI styled ones](https://coreui.io/demo/login.html)
+There's a command `ui:coreui` that behaves just like the built-in `ui:auth` command, but it replaces the default views with [CoreUI styled ones](https://coreui.io/demo/login.html)
 
 ```bash
-$ php artisan make:coreui
+$ php artisan ui:coreui
 ```
 
 ## Configuration
