@@ -33,6 +33,7 @@ This template yields multiple sections, all of them optional:
 `title`|for `<title>` tag
 `breadcrumb`|for breadcrumb bar 
 `body`|for all of the content
+`footer`|for all of the footer content
 `css`|for additional CSS files
 `js`|for additional JavaScript files
 
@@ -56,6 +57,10 @@ A page can look like this:
 @section('body')
     <h1>Dashboard</h1>
     <p>Welcome to this awesome web app!</p>
+@endsection
+
+@section('footer')
+    <p>My awesome footer!</p>
 @endsection
 
 @push('js')
