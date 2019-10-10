@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -31,7 +31,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="nav ml-auto">
-            @include('coreui::account')
+            @yield('account', View::make('coreui::account'))
         </ul>
     </div>
 </header>
