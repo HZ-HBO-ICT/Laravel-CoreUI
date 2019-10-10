@@ -22,7 +22,13 @@ return [
 //            'text' => 'Dashboard',          // The text to be displayed inside the menu.
 //            'url' => 'admin/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
 //            'icon' => 'chart-bar far',      // Name of FontAwesome icon to display. Note that you have to use the "far", "fas" or "fal" modifier behind the icon.
-//            'target' => '_blank'            // Target attribute of <a> tag.
+//            'target' => '_blank',           // Target attribute of <a> tag.
+
+//            'badge' => [                    // Optional. Displays a badge behind the text of the menu item.
+//                'text' => 'New!',           // Text to display in badge.
+//                'context' => 'danger',      // Coloring of the badge, uses CoreUI/Bootstrap context: primary, danger, warning, etc. Default is 'primary'.
+//                'pill' => true              // Whether badge should have rounded corners. Defaults to false;
+//            ]
 //        ],
 //        'First section',                    // Section header
 //        [
