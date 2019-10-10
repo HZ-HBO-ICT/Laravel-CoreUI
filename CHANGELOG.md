@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.0] - 2019-10-10
+## Added
+- Possibility for users to create badges in their menu. See updated `config/coreui.php` file for instructions.
+
+## Changed
+- Update master template with a csrf token in `<meta>` tag ([@Albvadi](https://github.com/Albvadi))
+- Update templating system so users can easily edit the footer ([@Albvadi](https://github.com/Albvadi)) and account dropdown menu
+
 ## [3.2.1] - 2019-10-08
 ### Changed
 - Update FontAwesome to 5.11.2
