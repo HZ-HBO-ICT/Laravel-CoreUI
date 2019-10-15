@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/v/stable)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
 [![Total Downloads](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/downloads)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
-[![License](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/license)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
+[![MIT Licensed](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/license)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
 
 This is an opinionated package designed to help our freshman year's students with rapid prototyping of web applications.
 
