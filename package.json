@@ -1,6 +1,6 @@
 {
     "dependencies": {
-        "@coreui/coreui": "^2.0.14",
+        "@coreui/coreui": "^2.1.16",
         "@fortawesome/fontawesome-free": "^5.11.2",
         "jquery": "^3.4.1"
     },
