@@ -2,12 +2,12 @@
 
 [![Latest Stable Version](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/v/stable)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
 [![Total Downloads](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/downloads)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
-[![License](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/license)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
+[![MIT Licensed](https://poser.pugx.org/hz-hbo-ict/laravel-core-ui/license)](https://packagist.org/packages/hz-hbo-ict/laravel-core-ui)
 
 This is an opinionated package designed to help our freshman year's students with rapid prototyping of web applications.
 
 The package is based upon [CoreUI](https://coreui.io/), with every plugin we deemed unnecessary removed.
-It builds upon the latest stable releases of [Laravel](https://laravel.com). As of now, that is version `6.0`.
+It builds upon the latest stable releases of [Laravel](https://laravel.com). As of now, that is version `6.x`.
 
 It also incorporates a replacement command for Laravel's [`ui:auth`](https://laravel.com/docs/6.0/authentication#introduction) command that uses CoreUI styled views for a more consistent user experience.
 
