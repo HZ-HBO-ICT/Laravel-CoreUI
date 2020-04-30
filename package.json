@@ -2,7 +2,7 @@
     "dependencies": {
         "@coreui/coreui": "^2.1.16",
         "@fortawesome/fontawesome-free": "^5.11.2",
-        "jquery": "^3.4.1"
+        "jquery": "^3.5.0"
     },
     "scripts": {
         "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js resources/assets/js/",
