@@ -42,6 +42,8 @@ class CoreUIAuthCommand extends Command
      */
     public function handle()
     {
+        $this->callSilent('ui:controllers');
+
         $this->ensureDirectoriesExist();
         $this->exportViews();
 
