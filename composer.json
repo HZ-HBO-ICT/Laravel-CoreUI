@@ -35,7 +35,8 @@
     },
     "require": {
         "php": "^7.2",
-        "laravel/framework": "^8.0"
+        "laravel/framework": "^8.0",
+        "laravel/ui": "^3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
