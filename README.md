@@ -7,9 +7,9 @@
 This is an opinionated package designed to help our freshman year's students with rapid prototyping of web applications.
 
 The package is based upon [CoreUI](https://coreui.io/), with every plugin we deemed unnecessary removed.
-It builds upon the latest stable releases of [Laravel](https://laravel.com). As of now, that is version `6.x`.
+It builds upon the latest stable releases of [Laravel](https://laravel.com). As of now, that is version `8.x`.
 
-It also incorporates a replacement command for Laravel's [`ui:auth`](https://laravel.com/docs/6.0/authentication#introduction) command that uses CoreUI styled views for a more consistent user experience.
+It also incorporates a replacement command for Laravel's old [`ui:auth`](https://laravel.com/docs/6.0/authentication#introduction) command that uses CoreUI styled views for a more consistent user experience.
 
 The result is an easy to use package that can setup a secure and complete dashboard front-end in a matter of seconds. Adding new views and features is a breeze and doesn't disrupt your normal workflow.
 
