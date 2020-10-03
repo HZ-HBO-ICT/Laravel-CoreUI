@@ -73,9 +73,6 @@
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.bundle.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui-utilities.min.js') }}"></script>
 
-<!-- Load in scripts to manage sidebar -->
-<script type="application/javascript" src="{{ asset('vendor/coreui/js/add_listener_to_sidebar.js') }}"></script>
-
 <!-- Custom JS -->
 @stack('js')
 </body>
