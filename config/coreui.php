@@ -12,7 +12,6 @@ return [
      * NOTE: This is a non-escaped string, so you can put HTML in here
      */
     'logo' => 'Core<strong>UI</strong>',
-    'logo_mini' => 'C',
 
     /*
      * Menu builder
