@@ -19,7 +19,8 @@
 </head>
 <body class="c-app">
 
-<div id="sidebar" class="c-sidebar c-sidebar-fixed c-sidebar-lg-show">
+<div id="sidebar" class="c-sidebar c-sidebar-fixed c-no-transition">
+    <script type="application/javascript" src="{{ asset('vendor/coreui/js/toggle_sidebar.js') }}"></script>
     <a class="c-sidebar-brand d-md-down-none" href="{{ url('/') }}">
         <div class="c-sidebar-brand-full">{!! config('coreui.logo') !!}</div>
     </a>
@@ -32,7 +33,7 @@
 <div class="c-wrapper">
     <header class="c-header c-header-fixed justify-content-between">
         <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show">
-            <span class="c-header-toggler-icon"></span>
+            <span id="sidebar-toggler" class="c-header-toggler-icon"></span>
         </button>
         <button class="c-header-toggler c-class-toggler mfs-3 d-lg-none" type="button" data-target="#sidebar" data-class="c-sidebar-show">
             <span class="c-header-toggler-icon"></span>
@@ -71,6 +72,9 @@
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/perfect-scrollbar.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.bundle.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui-utilities.min.js') }}"></script>
+
+<!-- Load in scripts to manage sidebar -->
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/add_listener_to_sidebar.js') }}"></script>
 
 <!-- Custom JS -->
 @stack('js')

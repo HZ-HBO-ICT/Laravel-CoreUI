@@ -1,13 +1,12 @@
 /**
  * Update local store whether sidebar should be shown or not
  */
-let toggleSidebarItem = function() {
-    if (sidebarShouldBeShown()) {
-        window.localStorage.removeItem('remember_sidebar');
-    } else {
-        window.localStorage.setItem('remember_sidebar', 'true');
-    }
-};
+// Wrap in a function to ensure no collisions with other code
+(() => {
+    let sidebar = document.getElementById('sidebar');
 
-let sidebarCollapseButton = document.getElementsByClassName('c-sidebar-minimizer')[0];
-sidebarCollapseButton.addEventListener('click', toggleSidebarItem);
+    sidebar.addEventListener('classtoggle', () => {
+        let collapsed = sidebar.classList.contains('c-sidebar-lg-show') ? 'true' : 'false';
+        window.localStorage.setItem('remember_sidebar', collapsed);
+    });
+})();
