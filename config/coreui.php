@@ -33,7 +33,8 @@ return [
 //        [
 //            'text' => 'Users',
 //            'route' => 'admin.users',       // The route behind the text. Mutually exclusive with "url" option.
-//            'icon' => 'users fas'
+//            'icon' => 'users',
+//            'fa-family' => 'fas'            // Change the FontAwesome family: fas, far, fab, etc. Default is 'fas'
 //        ],
 //        'Admin only',
 //        [
@@ -43,7 +44,7 @@ return [
 //            'submenu' => [
 //                [
 //                    'text' => 'Level one',
-//                    'icon' => 'bell',       // Tip: always set icons. Submenus in particular tend to get misaligned plus it's more accessible and user friendly.
+//                    'icon' => 'bell',       // Tip: always set icons. It's more accessible and user friendly.
 //                    'url' => 'admin/settings/level-one'
 //                ],
 //                [
