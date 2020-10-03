@@ -17,52 +17,56 @@
 
     <title>@yield('title', config('coreui.title', __('coreui::coreui.default_title')))</title>
 </head>
-<body class="app header-fixed sidebar-fixed sidebar-lg-show sidebar-minimized brand-minimized">
-<header class="app-header navbar">
-    <div class="container-fluid">
-        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-            <span class="navbar-toggler-icon"></span>
+<body class="c-app">
+
+{{--<script type="application/javascript" src="{{ asset('vendor/coreui/js/toggle_sidebar.js') }}"></script>--}}
+<div class="c-sidebar c-sidebar-fixed c-sidebar-lg-show">
+    <a class="c-sidebar-brand d-md-down-none" href="{{ url('/') }}">
+        <div class="c-sidebar-brand-full">{!! config('coreui.logo') !!}</div>
+        <div class="c-sidebar-brand-minimized">{!! config('coreui.logo_mini') !!}</div>
+    </a>
+
+    <ul class="c-sidebar-nav">
+        @each('coreui::menu-item', $coreUI->menu(), 'item')
+    </ul>
+
+    <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-unfoldable"></button>
+
+{{--    <script type="application/javascript" src="{{ asset('vendor/coreui/js/add_listener_to_sidebar.js') }}"></script>--}}
+</div>
+
+<div class="c-wrapper">
+    <header class="c-header c-header-fixed navbar">
+        <button class="c-header-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="c-header-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <span class="navbar-brand-full">{!! config('coreui.logo') !!}</span>
-            <span class="navbar-brand-minimized">{!! config('coreui.logo_mini') !!}</span>
-        </a>
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-            <span class="navbar-toggler-icon"></span>
+        <button class="c-header-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+            <span class="c-header-toggler-icon"></span>
         </button>
-        <ul class="nav ml-auto">
+        <ul class="c-header-nav ml-auto">
             @yield('account', View::make('coreui::account'))
         </ul>
-    </div>
-</header>
-<div class="app-body">
-    <script type="application/javascript" src="{{ asset('vendor/coreui/js/toggle_sidebar.js') }}"></script>
-    <div class="sidebar">
-        <nav class="sidebar-nav">
-            <ul class="nav">
-                @each('coreui::menu-item', $coreUI->menu(), 'item')
-            </ul>
-        </nav>
-        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-        <script type="application/javascript" src="{{ asset('vendor/coreui/js/add_listener_to_sidebar.js') }}"></script>
-    </div>
-    <main class="main">
-        <div aria-label="breadcrumb">
-            @yield('breadcrumb')
-        </div>
-        <div class="container-fluid">
-            @yield('body')
-        </div>
-    </main>
-</div>
-<footer class="app-footer">
-    @yield('footer', View::make('coreui::footer'))
-</footer>
+    </header>
 
-<!-- jQuery first, then Bootstrap, then CoreUI  -->
-<script type="application/javascript" src="{{ asset('vendor/coreui/js/jquery.slim.min.js') }}"></script>
-<script type="application/javascript" src="{{ asset('vendor/coreui/js/bootstrap.bundle.min.js') }}"></script>
-<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.min.js') }}"></script>
+    <div class="c-body">
+        <main class="c-main">
+            <div aria-label="breadcrumb">
+                @yield('breadcrumb')
+            </div>
+            <div class="container-fluid">
+                @yield('body')
+            </div>
+        </main>
+    </div>
+
+    <footer class="c-footer">
+        @yield('footer', View::make('coreui::footer'))
+    </footer>
+</div>
+
+<!-- Perfect Scrollbar first, then CoreUI  -->
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/perfect-scrollbar.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui.bundle.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('vendor/coreui/js/coreui-utilities.min.js') }}"></script>
 
 <!-- Custom JS -->

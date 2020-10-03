@@ -9,5 +9,5 @@ let toggleSidebarItem = function() {
     }
 };
 
-let sidebarCollapseButton = document.getElementsByClassName('sidebar-minimizer')[0];
+let sidebarCollapseButton = document.getElementsByClassName('c-sidebar-minimizer')[0];
 sidebarCollapseButton.addEventListener('click', toggleSidebarItem);
