@@ -1,9 +1,9 @@
 @if(is_string($item))
-    <li class="nav-title">{{ $item }}</li>
+    <li class="c-sidebar-nav-title">{{ $item }}</li>
 @elseif(isset($item['submenu']))
-    <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-            @if(isset($item['icon'])) <i class="nav-icon fa-{{ $item['icon'] }}"></i> @endif
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            @if(isset($item['icon'])) <i class="c-sidebar-nav-icon {{ $item['fa-family'] ?? 'fas' }} fa-{{ $item['icon'] }}"></i> @endif
             {{ __($item['text']) }}
             @if(isset($item['badge']))
                 <span
@@ -12,17 +12,17 @@
                 ">{{ $item['badge']['text'] }}</span>
             @endif
         </a>
-        <ul class="nav-dropdown-items">
+        <ul class="c-sidebar-nav-dropdown-items">
             @each('coreui::menu-item', $item['submenu'], 'item')
         </ul>
     </li>
 @else
-    <li class="nav-item {{ $item['class'] }}">
+    <li class="c-sidebar-nav-item {{ $item['class'] }}">
         <a href="{{ $item['href'] }}"
            @if(isset($item['target'])) target="{{ $item['target'] }}" @endif
-            class="nav-link"
+            class="c-sidebar-nav-link"
         >
-            @if(isset($item['icon'])) <i class="nav-icon fa-{{ $item['icon'] }}"></i> @endif
+            @if(isset($item['icon'])) <i class="c-sidebar-nav-icon {{ $item['fa-family'] ?? 'fas' }} fa-{{ $item['icon'] }}"></i> @endif
             {{ __($item['text']) }}
             @if(isset($item['badge']))
                     <span

@@ -1,6 +1,6 @@
 @if (\Illuminate\Support\Facades\Auth::user() !== null)
-    <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+    <li class="c-header-nav-item dropdown">
+        <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
            aria-expanded="false">
 
             {{-- This part renders the dropdown menu item --}}
